@@ -3,99 +3,105 @@ module.exports = {
     diseasesQuery: async function (req, res){
 
         try{
-            if(req.body.queryResult.parameters.disease == 'feaver'){
+            if(req.body.queryResult.parameters.disease == 'cough'){
                 return res.ok (
                     {
-                        "fulfillmentText": "This is a text response",
+                        "fulfillmentText": "Cough",
                         "fulfillmentMessages": [
                             {
                             "card": {
-                                "title": "card title",
-                                "subtitle": "card text",
-                                "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
+                                "title": "Cough",
+                                "subtitle": "Causes and Treatment",
+                                "imageUri": "https://www.dropbox.com/s/0zm3rx3j7ymgk4m/cough.jpg?dl=1",
                                 "buttons": [
-                                {
-                                    "text": "button text",
-                                    "postback": "https://assistant.google.com/"
-                                }
+                                    {
+                                        "text": "Cough Causes",
+                                        "postback": "http://gurukullearn.com/cough_reason.html"
+                                    },
+                                    {
+                                        "text": "Cough - Treatment to cure",
+                                        "postback": "http://gurukullearn.com/cough_remedy.html"
+                                    }
                                 ]
                             }
                             }
                         ],
-                        "source": "example.com",
-                        "payload": {
-                            "google": {
-                            "expectUserResponse": true,
-                            "richResponse": {
-                                "items": [
-                                {
-                                    "simpleResponse": {
-                                    "textToSpeech": "this is a simple response"
-                                    }
-                                }
-                                ]
-                            }
-                            },
-                            "facebook": {
-                            "text": "Hello, Facebook!"
-                            },
-                            "slack": {
-                            "text": "This is a text response for Slack."
-                            }
-                        }
-                    }
-                    
-                    /*{
-                    "fulfillmentText": "This is a text response.\n\n Annother line",
-                    "fulfillmentMessages": [
-                      {
-                        "card": {
-                          "title": "card title",
-                          "subtitle": "card text",
-                          "imageUri": "https://assistant.google.com/static/images/molecule/Molecule-Formation-stop.png",
-                          "buttons": [
+                    });
+            }
+            if(req.body.queryResult.parameters.disease == 'jaundice'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Jaundice",
+                        "fulfillmentMessages": [
                             {
-                              "text": "button text",
-                              "postback": "https://assistant.google.com/"
-                            }
-                          ]
-                        }
-                      }
-                    ],
-                    "source": "example.com",
-                    "payload": {
-                        "google": {
-                            "expectUserResponse": true,
-                            "richResponse": {
-                                "items": [
+                            "card": {
+                                "title": "Jaundice",
+                                "subtitle": "Causes and Treatment",
+                                "imageUri": "https://www.dropbox.com/s/tubu8qwfwru2gqa/liver.jpg?dl=1",
+                                "buttons": [
                                     {
-                                        "simpleResponse": {
-                                            "textToSpeech": "This is a Basic Card:"
-                                        }
+                                        "text": "Jaundice Causes",
+                                        "postback": "http://gurukullearn.com/jaundice_reason.html"
                                     },
                                     {
-                                        "basicCard": {
-                                            "title": "card title",
-                                            "image": {
-                                                "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
-                                                "accessibilityText": "Google Logo"
-                                            },
-                                            "buttons": [
-                                                {
-                                                    "title": "Button Title",
-                                                    "openUrlAction": {
-                                                        "url": "https://www.google.com"
-                                                    }
-                                                }
-                                            ],
-                                            "imageDisplayOptions": "WHITE"
-                                        }
+                                        "text": "Jaundice - Treatment to cure",
+                                        "postback": "http://gurukullearn.com/jaundice_remedy.html"
                                     }
                                 ]
                             }
-                        }
-                    }
-                }*/);
+                            }
+                        ],
+                    });
+            }
+            if(req.body.queryResult.parameters.disease == 'diabetes'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Diabetes",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Diabetes",
+                                "subtitle": "Causes and Treatment",
+                                "imageUri": "https://www.dropbox.com/s/mjso5nhl1c5d24l/dibetes.jpg?dl=1",
+                                "buttons": [
+                                    {
+                                        "text": "Diabetes Causes",
+                                        "postback": "http://gurukullearn.com/diabetes_causes.html"
+                                    },
+                                    {
+                                        "text": "Diabetes - Treatment to cure",
+                                        "postback": "http://gurukullearn.com/diabetes_remedy.html"
+                                    }
+                                ]
+                            }
+                            }
+                        ],
+                    });
+            }
+            if(req.body.queryResult.parameters.disease == 'malaria'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Malaria",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Malaria",
+                                "subtitle": "Causes and Treatment",
+                                "imageUri": "https://www.dropbox.com/s/sg01sxfhh2ywydd/Malaria.jpg?dl=1",
+                                "buttons": [
+                                    {
+                                        "text": "Malaria Causes",
+                                        "postback": "http://gurukullearn.com/malaria_causes.html"
+                                    },
+                                    {
+                                        "text": "Malaria - Treatment to cure",
+                                        "postback": "http://gurukullearn.com/malaria_remedy.html"
+                                    }
+                                ]
+                            }
+                            }
+                        ],
+                    });
             }
         }catch(err){
             return res.ok ('ERROR::::'+err);
