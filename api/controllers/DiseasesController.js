@@ -5,7 +5,7 @@ module.exports = {
         try{
             if(req.body.queryResult.parameters.disease == 'feaver'){
                 return res.ok ({
-                    "fulfillmentText": "This is a text response",
+                    "fulfillmentText": "This is a text response.\n\n Annother line",
                     "fulfillmentMessages": [
                       {
                         "card": {
