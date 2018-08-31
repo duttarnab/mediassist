@@ -4,9 +4,45 @@ module.exports = {
 
         try{
             if(req.body.queryResult.parameters.disease == 'feaver'){
-                return res.ok ({
+                return res.ok (
+                    {
+                        "payload": {
+                          "google": {
+                            "expectUserResponse": true,
+                            "richResponse": {
+                              "items": [
+                                {
+                                  "simpleResponse": {
+                                    "textToSpeech": "This is a Basic Card:"
+                                  }
+                                },
+                                {
+                                  "basicCard": {
+                                    "title": "Card Title",
+                                    "image": {
+                                      "url": "https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png",
+                                      "accessibilityText": "Google Logo"
+                                    },
+                                    "buttons": [
+                                      {
+                                        "title": "Button Title",
+                                        "openUrlAction": {
+                                          "url": "https://www.google.com"
+                                        }
+                                      }
+                                    ],
+                                    "imageDisplayOptions": "WHITE"
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      }
+                    
+                    /*{
                     "fulfillmentText": "This is a text response.\n\n Annother line",
-                    "fulfillmentMessages": [/*
+                    "fulfillmentMessages": [
                       {
                         "card": {
                           "title": "card title",
@@ -19,7 +55,7 @@ module.exports = {
                             }
                           ]
                         }
-                      }*/
+                      }
                     ],
                     "source": "example.com",
                     "payload": {
@@ -54,7 +90,7 @@ module.exports = {
                             }
                         }
                     }
-                });
+                }*/);
             }
         }catch(err){
             return res.ok ('ERROR::::'+err);
