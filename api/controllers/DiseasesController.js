@@ -6,7 +6,7 @@ module.exports = {
             if(req.body.queryResult.parameters.disease == 'feaver'){
                 return res.ok ({
                     "fulfillmentText": "This is a text response.\n\n Annother line",
-                    "fulfillmentMessages": [
+                    "fulfillmentMessages": [/*
                       {
                         "card": {
                           "title": "card title",
@@ -19,8 +19,9 @@ module.exports = {
                             }
                           ]
                         }
-                      }
+                      }*/
                     ],
+                    "source": "example.com",
                     "payload": {
                         "google": {
                             "expectUserResponse": true,
