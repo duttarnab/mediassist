@@ -110,7 +110,7 @@ module.exports = {
                         {
                         "card": {
                             "title": "Diseases",
-                            "subtitle": "Causes and Treatment",
+                            "subtitle": "type name diseases to find its information",
                             "imageUri": "https://www.dropbox.com/s/zw62g6i1157qniy/good_health.jpg?dl=1",
                         }
                         }
