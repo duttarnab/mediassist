@@ -103,6 +103,19 @@ module.exports = {
                         ],
                     });
             }
+            return res.ok (
+                {
+                    "fulfillmentText": "Diseases",
+                    "fulfillmentMessages": [
+                        {
+                        "card": {
+                            "title": "Diseases",
+                            "subtitle": "Causes and Treatment",
+                            "imageUri": "https://www.dropbox.com/s/zw62g6i1157qniy/good_health.jpg?dl=1",
+                        }
+                        }
+                    ],
+                });
         }catch(err){
             return res.ok ('ERROR::::'+err);
         }
