@@ -3,6 +3,7 @@ module.exports = {
     diseasesQuery: async function (req, res){
 
         try{
+            console.log('>>>'+req.body.queryResult.parameters.disease+'<<<');
             if(req.body.queryResult.parameters.disease == 'cough'){
                 return res.ok (
                     {
