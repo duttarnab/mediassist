@@ -1,6 +1,6 @@
 module.exports = {
 
-    diseasesQuery: async function (req, res){
+    diseasesQuery:  function (req, res){
 
         try{
             console.log('>>>'+req.body.queryResult.parameters.disease+'<<<');
