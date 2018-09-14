@@ -104,6 +104,105 @@ module.exports = {
                         ],
                     });
             }
+            if(req.body.queryResult.parameters.nutrition == 'protein'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Protein",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Protein",
+                                "subtitle": "Information",
+                                "imageUri": "https://www.dropbox.com/s/9ylprk30ez33owk/protein.png?dl=1",
+                                "buttons": [
+                                    {
+                                        "text": "Protein Information",
+                                        "postback": "https://en.wikipedia.org/wiki/Protein_(nutrient)"
+                                    }
+                                ]
+                            }
+                        }],
+                    });
+            }
+            if(req.body.queryResult.parameters.nutrition == 'carbohydrates'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Carbohydrates",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Carbohydrates",
+                                "subtitle": "Information",
+                                "imageUri": "https://www.dropbox.com/s/9ifueersj4kaxg7/carbohydrates.png?dl=1",
+                                "buttons": [
+                                    {
+                                        "text": "Carbohydrates Information",
+                                        "postback": "https://en.wikipedia.org/wiki/Carbohydrate"
+                                    }
+                                ]
+                            }
+                        }],
+                    });
+            }
+            if(req.body.queryResult.parameters.nutrition == 'fat'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Fat",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Fat",
+                                "subtitle": "Information",
+                                "imageUri": "https://www.dropbox.com/s/iy16gulfy2n02gg/fat.png?dl=1",
+                                "buttons": [
+                                    {
+                                        "text": "Fat Information",
+                                        "postback": "https://en.wikipedia.org/wiki/Fat"
+                                    }
+                                ]
+                            }
+                        }],
+                    });
+            }
+            if(req.body.queryResult.parameters.nutrition == 'vitamin'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Vitamin",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Vitamin",
+                                "subtitle": "Information",
+                                "imageUri": "https://www.dropbox.com/s/hjd00kxhp7eiz88/vitamin.jpg?dl=1",
+                                "buttons": [
+                                    {
+                                        "text": "Vitamin Information",
+                                        "postback": "https://en.wikipedia.org/wiki/Vitamin"
+                                    }
+                                ]
+                            }
+                        }],
+                    });
+            }
+            if(req.body.queryResult.parameters.nutrition == 'mineral'){
+                return res.ok (
+                    {
+                        "fulfillmentText": "Minerals",
+                        "fulfillmentMessages": [
+                            {
+                            "card": {
+                                "title": "Minerals",
+                                "subtitle": "Information",
+                                "buttons": [
+                                    {
+                                        "text": "Minerals Information",
+                                        "postback": "https://en.wikipedia.org/wiki/Mineral_(nutrient)"
+                                    }
+                                ]
+                            }
+                        }],
+                    });
+            }
             return res.ok (
                 {
                     "fulfillmentText": "Diseases",
@@ -111,7 +210,7 @@ module.exports = {
                         {
                         "card": {
                             "title": "Diseases",
-                            "subtitle": "type name diseases to find its information",
+                            "subtitle": "Type name diseases or nutrient to find its information",
                             "imageUri": "https://www.dropbox.com/s/zw62g6i1157qniy/good_health.jpg?dl=1",
                         }
                         }
